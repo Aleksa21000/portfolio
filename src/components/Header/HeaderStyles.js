@@ -37,7 +37,7 @@ export const Div2 = styled.div`
 		order: 3;
 		width: 100%;
 		align-items: center;
-		justify-content: center;
+		margin-left: 7px;
 	}
 `;
 export const Div3 = styled.div`

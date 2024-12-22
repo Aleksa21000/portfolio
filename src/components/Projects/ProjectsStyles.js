@@ -100,3 +100,32 @@ export const ExternalLinks = styled.a`
 		border-radius: 15px;
 	}
 `;
+
+export const PaginationBtn = styled.button`
+	padding: 10px 15px;
+	margin: 0 5px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: #2e2e2e;
+	color: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+	&.active {
+		background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
+	}
+`;
+
+export const SearchInput = styled.input`
+	padding: 10px;
+	font-size: 16px;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	background: #2e2e2e;
+	color: #fff;
+	border: none;
+	outline: none;
+`;

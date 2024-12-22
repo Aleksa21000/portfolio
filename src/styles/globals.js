@@ -8,6 +8,18 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    &::selection {
+      background:rgba(19, 172, 199, 0.4);
+      color: #fff;
+      text-shadow: none;
+    }
+
+    &::-moz-selection {
+      background: rgba(19, 172, 199, 0.4);
+      color: #fff;
+      text-shadow: none;
+    }
   }
   html {
     font-size: 62.5%;
@@ -15,15 +27,15 @@ const GlobalStyles = createGlobalStyle`
 
   }
   body {
-    font-family: ${props => props.theme.fonts.main};
+    font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
-    background: ${props => props.theme.colors.background1};
-    color: ${props => props.theme.colors.primary1};
+    background: ${(props) => props.theme.colors.background1};
+    color: ${(props) => props.theme.colors.primary1};
     cursor: default;
 
   }
   h1,h2,h3,h4,h5,h6,button {
-    font-family: ${props => props.theme.fonts.title};
+    font-family: ${(props) => props.theme.fonts.title};
   }
   a {
     text-decoration: none;

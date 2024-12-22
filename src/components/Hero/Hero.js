@@ -22,9 +22,9 @@ const Hero = () => (
 				frontend development in MERN stack, this is my passion!
 			</SectionText>
 			<PdfLink
-				href="/cv-aleksa-radulovic.pdf"
+				href="/CV Aleksa Radulovic.pdf"
 				target="_blank">
-				Pogledajte moj CV
+				Check my CV
 			</PdfLink>
 		</LeftSection>
 		<ImgWrapper>

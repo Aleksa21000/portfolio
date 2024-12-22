@@ -7,7 +7,49 @@ export const projects = [
 		company: 'Upwork freelance',
 		source: 'https://www.essentialghib.com/',
 		visit: 'https://github.com/Aleksa21000/EssentialGHIB',
+		category: 'personal',
 		id: 0,
+	},
+	{
+		title: 'Projekat',
+		description:
+			'Simple responsive landing page, created and designed by me for Upwork customer during my early days in industry.',
+		image: '/images/eghib.jpg',
+		company: 'Upwork freelance',
+		source: 'https://www.essentialghib.com/',
+		visit: 'https://github.com/Aleksa21000/EssentialGHIB',
+		category: 'popart-studio',
+		id: 1,
+	},
+	{
+		title: 'Testing project',
+		description:
+			'Simple responsive landing page, created and designed by me for Upwork customer during my early days in industry.',
+		image: '/images/eghib.jpg',
+		company: 'Upwork freelance',
+		source: 'https://www.essentialghib.com/',
+		category: 'mlab-studio',
+		id: 2,
+	},
+	{
+		title: 'Simple project',
+		description:
+			'Simple responsive landing page, created and designed by me for Upwork customer during my early days in industry.',
+		image: '/images/eghib.jpg',
+		company: 'Upwork freelance',
+		source: 'https://www.essentialghib.com/',
+		category: 'mlab-studio',
+		id: 3,
+	},
+	{
+		title: 'ghbse',
+		description:
+			'Simple responsive landing page, created and designed by me for Upwork customer during my early days in industry.',
+		image: '/images/eghib.jpg',
+		company: 'Upwork freelance',
+		source: 'https://www.essentialghib.com/',
+		category: 'mlab-studio',
+		id: 4,
 	},
 ];
 
