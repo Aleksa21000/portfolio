@@ -8,7 +8,7 @@ const Hero = () => (
 	<Section
 		flex
 		row
-		style={{ alignItems: 'center', gap: '30px;' }}
+		style={{ alignItems: 'center', gap: '30px' }}
 		className="hero-banner">
 		<LeftSection>
 			<SectionTitle

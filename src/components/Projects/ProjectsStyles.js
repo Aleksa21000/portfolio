@@ -129,3 +129,39 @@ export const SearchInput = styled.input`
 	border: none;
 	outline: none;
 `;
+
+export const CategoryButtonContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	gap: 25px;
+	margin-bottom: 45px;
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		flex-wrap: wrap;
+		gap: 25px 0;
+	}
+`;
+
+export const CategoryButton = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 12px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	background: #2e2e2e;
+	color: #fff;
+	cursor: pointer;
+
+	&.active {
+		background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
+	}
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		width: 47%;
+		font-size: 14px;
+	}
+`;

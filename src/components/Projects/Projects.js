@@ -11,6 +11,8 @@ import {
 	Img,
 	PaginationBtn,
 	SearchInput,
+	CategoryButtonContainer,
+	CategoryButton,
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects as allProjects } from '../../constants/constants';
@@ -18,21 +20,31 @@ import { projects as allProjects } from '../../constants/constants';
 const Projects = () => {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [currentPage, setCurrentPage] = useState(1);
+	const [activeCategory, setActiveCategory] = useState('All');
+	const categories = ['All', ...new Set(allProjects.map((project) => project.category))];
 	const projectsPerPage = 4;
 	const sectionRef = useRef(null);
 
-	// Filter Projects by title
-	const filteredProjects = allProjects.filter((project) => project.title.toLowerCase().includes(searchTerm.toLowerCase()));
+	// Filter Projects by title & category
+	const filteredProjects = allProjects.filter((project) => {
+		const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase());
+		const matchesCategory = activeCategory === 'All' || project.category === activeCategory;
+		return matchesSearch && matchesCategory;
+	});
 
 	// Pagination
 	const indexOfLastProject = currentPage * projectsPerPage;
 	const indexOfFirstProject = indexOfLastProject - projectsPerPage;
 	const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
-
 	const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
 
 	const handleSearchChange = (e) => {
 		setSearchTerm(e.target.value);
+		setCurrentPage(1);
+	};
+
+	const handleCategoryChange = (category) => {
+		setActiveCategory(category);
 		setCurrentPage(1);
 	};
 
@@ -55,6 +67,19 @@ const Projects = () => {
 		</div>
 	);
 
+	const categoryButtons = (
+		<CategoryButtonContainer>
+			{categories.map((category) => (
+				<CategoryButton
+					key={category}
+					className={activeCategory === category ? 'active' : ''}
+					onClick={() => handleCategoryChange(category)}>
+					{category}
+				</CategoryButton>
+			))}
+		</CategoryButtonContainer>
+	);
+
 	const pagination = totalPages > 1 && (
 		<div style={{ marginTop: '20px', textAlign: 'center' }}>
 			{[...Array(totalPages)].map((_, index) => (
@@ -73,41 +98,54 @@ const Projects = () => {
 			nopadding
 			id="projects"
 			ref={sectionRef}>
-			<SectionDivider divider />
-			<SectionTitle main>Projects</SectionTitle>
+			<SectionTitle
+				main
+				style={{ paddingTop: 0 }}>
+				Projects
+			</SectionTitle>
 			{searchBar}
+			{categoryButtons}
 			<GridContainer>
-				{currentProjects.map((project) => (
-					<BlogCard
-						key={project.id}
-						id={project.category}>
-						<Img src={project.image} />
-						<TitleContent>
-							<HeaderThree title="true">{project.title}</HeaderThree>
-							<Hr />
-						</TitleContent>
-						<CardInfo>{project.description}</CardInfo>
-						<div>
-							<CardInfo style={{ marginTop: '30px', fontSize: '22px' }}>Company:</CardInfo>
-							<CardInfo style={{ marginTop: '7px', fontFamily: '"Noto Sans", serif' }}>{project.company}</CardInfo>
-						</div>
-						<UtilityList>
-							<ExternalLinks
-								href={project.visit}
-								target="_blank"
-								style={!project.visit ? { display: 'none' } : { display: 'flex' }}>
-								Code
-							</ExternalLinks>
-							<ExternalLinks
-								href={project.source}
-								target="_blank">
-								Website
-							</ExternalLinks>
-						</UtilityList>
-					</BlogCard>
-				))}
+				{currentProjects.length > 0 ? (
+					currentProjects.map((project) => (
+						<BlogCard
+							key={project.id}
+							id={project.category}>
+							<Img src={project.image} />
+							<TitleContent>
+								<HeaderThree title="true">{project.title}</HeaderThree>
+								<Hr />
+							</TitleContent>
+							<CardInfo>{project.description}</CardInfo>
+							<div>
+								<CardInfo style={{ marginTop: '30px', fontSize: '22px' }}>Company:</CardInfo>
+								<CardInfo style={{ marginTop: '7px', fontFamily: '"Noto Sans", serif' }}>
+									{project.company}
+								</CardInfo>
+							</div>
+							<UtilityList>
+								<ExternalLinks
+									href={project.visit}
+									target="_blank"
+									style={!project.visit ? { display: 'none' } : { display: 'flex' }}>
+									Code
+								</ExternalLinks>
+								<ExternalLinks
+									href={project.source}
+									target="_blank">
+									Website
+								</ExternalLinks>
+							</UtilityList>
+						</BlogCard>
+					))
+				) : (
+					<p style={{ textAlign: 'center', fontSize: '18px', color: '#888' }}>
+						No projects found matching your search criteria.
+					</p>
+				)}
 			</GridContainer>
 			{pagination}
+			<SectionDivider divider />
 		</Section>
 	);
 };

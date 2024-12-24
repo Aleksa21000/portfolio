@@ -6,6 +6,7 @@ const Technologies = () => (
 	<div>
 		<Section id="tech">
 			<SectionDivider divider />
+			<br />
 			<SectionTitle>Technologies</SectionTitle>
 			<SectionText>
 				✔️ Design and development responsive interfaces
