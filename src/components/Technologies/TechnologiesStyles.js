@@ -56,7 +56,7 @@ export const ListContainer = styled.div`
 	flex-direction: column;
 `;
 
-export const ListTitle = styled.h4`
+export const ListTitle = styled.h3`
 	font-weight: 700;
 	font-size: 28px;
 	line-height: 32px;

@@ -17,6 +17,20 @@ import {
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects as allProjects } from '../../constants/constants';
 
+const ProjectImage = ({ image, alt }) => (
+	<picture>
+		<source
+			srcSet={image.webp}
+			type="image/webp"
+		/>
+		<Img
+			src={image.jpg}
+			alt={`${alt} Cover Image`}
+			loading="lazy"
+		/>
+	</picture>
+);
+
 const Projects = () => {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [currentPage, setCurrentPage] = useState(1);
@@ -111,7 +125,10 @@ const Projects = () => {
 						<BlogCard
 							key={project.id}
 							id={project.category}>
-							<Img src={project.image} />
+							<ProjectImage
+								image={project.image}
+								alt={project.title}
+							/>
 							<TitleContent>
 								<HeaderThree title="true">{project.title}</HeaderThree>
 								<Hr />

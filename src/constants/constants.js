@@ -2,7 +2,7 @@ export const projects = [
 	{
 		title: 'M Lab Studio',
 		description: 'Portfolio of the company where I am working right now, worth watching!',
-		image: '/images/mlab.jpg',
+		image: { webp: '/images/mlab.webp', jpg: '/images/mlab.jpg' },
 		company: 'M Lab Studio',
 		source: 'https://mlab-studio.com/',
 		category: 'M Lab Studio',
@@ -11,7 +11,7 @@ export const projects = [
 	{
 		title: 'Tiska Fabrics',
 		description: 'Web store with custom pattern generator for fabrics and beautiful Frontend.',
-		image: '/images/tiska.jpg',
+		image: { webp: '/images/tiska.webp', jpg: '/images/tiska.jpg' },
 		company: 'PopArt Studio',
 		source: 'https://tiskafabrics.com/',
 		category: 'PopArt Studio',
@@ -20,7 +20,7 @@ export const projects = [
 	{
 		title: 'Live Radio Stations',
 		description: 'Interactive web app with radio stations and build in music player (SPA).',
-		image: '/images/lrs.jpg',
+		image: { webp: '/images/lrs.webp', jpg: '/images/lrs.jpg' },
 		company: 'M Lab Studio',
 		source: 'https://liveradiostations.net/',
 		category: 'M Lab Studio',
@@ -29,7 +29,7 @@ export const projects = [
 	{
 		title: 'Fazer Agency',
 		description: 'One of the projects from the company I worked on, custom theme development.',
-		image: '/images/fazer.jpg',
+		image: { webp: '/images/fazer.webp', jpg: '/images/fazer.jpg' },
 		company: 'PopArt Studio',
 		source: 'https://fazer.agency/',
 		category: 'PopArt Studio',
@@ -38,7 +38,7 @@ export const projects = [
 	{
 		title: 'Edward Austin',
 		description: 'One of the projects from the company I worked on, during my internship.',
-		image: '/images/austin.jpg',
+		image: { webp: '/images/austin.webp', jpg: '/images/austin.jpg' },
 		company: 'PopArt Studio',
 		source: 'https://www.edward-austin.com/',
 		category: 'PopArt Studio',
@@ -47,7 +47,7 @@ export const projects = [
 	{
 		title: 'Heri Transporte DE',
 		description: 'This project is part of freelance, the designer created the design and I did the development part.',
-		image: '/images/heri.jpg',
+		image: { webp: '/images/heri.webp', jpg: '/images/heri.jpg' },
 		company: 'Reference project',
 		source: 'https://heri-transporte.de/',
 		category: 'Personal',
@@ -56,7 +56,7 @@ export const projects = [
 	{
 		title: 'EssentialGHIB',
 		description: 'Simple landing page, fully created by me for Upwork customer during my early days in industry.',
-		image: '/images/eghib.jpg',
+		image: { webp: '/images/eghib.webp', jpg: '/images/eghib.jpg' },
 		company: 'Upwork freelance',
 		source: 'https://www.essentialghib.com/',
 		visit: 'https://github.com/Aleksa21000/EssentialGHIB',
@@ -73,4 +73,4 @@ export const TimeLineData = [
 	{ year: 2023, text: 'Started full time job at M Lab Studio (January)' },
 ];
 
-export const profileImage = '/images/profile-picture.jpg';
+export const profileImages = { webp: '/images/profile-picture.webp', jpg: '/images/profile-picture.jpg' };

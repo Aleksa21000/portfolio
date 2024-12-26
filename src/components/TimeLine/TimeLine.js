@@ -28,7 +28,7 @@ const Timeline = () => {
 		e.preventDefault();
 
 		if (carouselRef.current) {
-			const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length));
+			const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / (TimeLineData.length - 1)));
 
 			scroll(carouselRef.current, scrollLeft);
 		}
@@ -37,21 +37,23 @@ const Timeline = () => {
 	const handleScroll = () => {
 		if (carouselRef.current) {
 			const index = Math.round(
-				(carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length
+				(carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * (TimeLineData.length - 1)
 			);
 
 			setActiveItem(index);
 		}
 	};
 
-	// snap back to beginning of scroll when window is resized
-	// avoids a bug where content is covered up if coming from smaller screen
 	useEffect(() => {
 		const handleResize = () => {
 			scroll(carouselRef.current, 0);
 		};
 
 		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
 	}, []);
 
 	return (

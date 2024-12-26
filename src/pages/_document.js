@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
 
 	render() {
 		return (
-			<Html lang="en-GB">
+			<Html lang="en-US">
 				<Head>
 					<link
 						href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -39,6 +39,18 @@ export default class MyDocument extends Document {
 					<link
 						href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
 						rel="stylesheet"
+					/>
+					<meta
+						name="title"
+						content="Aleksa Radulović - Software Engineer | Frontend Development Specialist"
+					/>
+					<meta
+						name="description"
+						content="Aleksa Radulović, Middle Software Engineer with over 4 years of experience in commercial development. Specializing in frontend development using the MERN stack. Proficient in Next.js, React.js, TypeScript, Docker, Node.js, and more."
+					/>
+					<meta
+						name="keywords"
+						content="Aleksa Radulović, Software Engineer, Frontend Developer, Fullstack Developer, MERN stack, Next.js, React.js, TypeScript, Docker, Node.js, Express.js, responsive interfaces, scalable code, SPA, SSR, GoF patterns, SOLID principles, Data structures"
 					/>
 				</Head>
 				<body>
