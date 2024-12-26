@@ -28,12 +28,14 @@ const Footer = () => {
 				<SocialContainer>
 					<SocialIcons
 						href="https://github.com/Aleksa21000"
-						target="_blank">
+						target="_blank"
+						aria-label="Visit my GitHub profile">
 						<AiFillGithub size="3rem" />
 					</SocialIcons>
 					<SocialIcons
 						href="https://www.linkedin.com/in/aleksa-radulovi%C4%87-955079242/"
-						target="_blank">
+						target="_blank"
+						aria-label="Visit my LinkedIn profile">
 						<AiFillLinkedin size="3rem" />
 					</SocialIcons>
 				</SocialContainer>

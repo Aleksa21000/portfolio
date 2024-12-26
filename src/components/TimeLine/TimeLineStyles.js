@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CarouselContainer = styled.ul`
+export const CarouselContainer = styled.div`
 	max-width: 1040px;
 	background: #121212;
 	padding: 0rem;
@@ -63,7 +63,7 @@ export const CarouselItem = styled.div`
 	}
 `;
 
-export const CarouselItemTitle = styled.h4`
+export const CarouselItemTitle = styled.div`
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 32px;
@@ -102,7 +102,7 @@ export const CarouselItemText = styled.p`
 	font-size: 14px;
 	line-height: 22px;
 	letter-spacing: 0.02em;
-	color: rgba(255, 255, 255, 0.75);
+	color: rgb(233, 233, 233);
 	padding-right: 16px;
 
 	@media ${(props) => props.theme.breakpoints.md} {

@@ -27,6 +27,8 @@ const ProjectImage = ({ image, alt }) => (
 			src={image.jpg}
 			alt={`${alt} Cover Image`}
 			loading="lazy"
+			width={'510px'}
+			height={'241px'}
 		/>
 	</picture>
 );
@@ -141,17 +143,20 @@ const Projects = () => {
 								</CardInfo>
 							</div>
 							<UtilityList>
-								<ExternalLinks
-									href={project.visit}
-									target="_blank"
-									style={!project.visit ? { display: 'none' } : { display: 'flex' }}>
-									Code
-								</ExternalLinks>
-								<ExternalLinks
-									href={project.source}
-									target="_blank">
-									Website
-								</ExternalLinks>
+								{project.visit && (
+									<ExternalLinks
+										href={project.visit}
+										target="_blank">
+										Code
+									</ExternalLinks>
+								)}
+								{project.source && (
+									<ExternalLinks
+										href={project.source}
+										target="_blank">
+										Website
+									</ExternalLinks>
+								)}
 							</UtilityList>
 						</BlogCard>
 					))

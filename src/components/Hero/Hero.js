@@ -13,7 +13,8 @@ export const ProfileImage = () => (
 		<Img
 			src={profileImages.jpg}
 			alt={'Profile image of Aleksa Radulovic'}
-			loading="lazy"
+			width={'294px'}
+			height={'294px'}
 		/>
 	</picture>
 );
