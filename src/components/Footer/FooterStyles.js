@@ -140,7 +140,7 @@ export const LinkColumn = styled.div`
 		justify-content: center;
 	}
 `;
-export const LinkTitle = styled.h4`
+export const LinkTitle = styled.div`
 	font-style: normal;
 	font-weight: 600;
 	font-size: 12px;

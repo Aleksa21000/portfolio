@@ -26,11 +26,13 @@ const Hero = () => (
 				rel="preload"
 				href={profileImages.jpg}
 				as="image"
+				type="image/jpeg"
 			/>
 			<link
 				rel="preload"
 				href={profileImages.webp}
 				as="image"
+				type="image/webp"
 			/>
 		</Head>
 		<Section
