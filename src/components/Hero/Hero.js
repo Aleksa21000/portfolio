@@ -48,8 +48,8 @@ const Hero = () => (
 					Software Engineer
 				</MainTitle>
 				<SectionText>
-					I'm a Middle Software Engineer with 4+ years of experience of commercial development. My main direction is
-					frontend development in MERN stack, this is my passion!
+					I'm a Software Engineer with 6+ years of experience of commercial development. 
+					My main direction is frontend development in MERN stack for last 4+ years.
 				</SectionText>
 				<PdfLink
 					href="/CV Aleksa Radulovic.pdf"

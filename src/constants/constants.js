@@ -66,11 +66,11 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-	{ year: 2019, text: 'Started my journey' },
-	{ year: 2020, text: 'Freelance work & Company intership' },
-	{ year: 2021, text: 'First full time job at PopArt Studio' },
-	{ year: 2023, text: 'Second part time job at M Lab Studio (9 months)' },
-	{ year: 2023, text: 'Started full time job at M Lab Studio (January)' },
+	{ year: 2019, text: 'Started my journey in Wespero web studio' },
+	{ year: 2021, text: 'Second full time job at PopArt Studio' },
+	{ year: 2022, text: 'Got promoted to Software Engineer at PopArt Studio' },
+	{ year: 2023, text: 'Started part time job at M Lab Studio (9 months) as Software Engineer' },
+	{ year: 2023, text: 'Started full time job at M Lab Studio (January) as Software Engineer' },
 ];
 
 export const profileImages = { webp: '/images/profile-picture.webp', jpg: '/images/profile-picture.jpg' };

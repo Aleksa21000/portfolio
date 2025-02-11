@@ -15,7 +15,9 @@ const Technologies = () => (
 				<br />
 				✔️ SPA, SSR, Universal apps
 				<br />
-				✔️ Patterns and approaches: GoF, SOLID, DDD, TDD;
+				✔️ Patterns and approaches: GoF, SOLID, DDD, TDD, GitFlow;
+				<br />
+				✔️ Management: Jira, Trello, Clickup, Confluence;
 			</SectionText>
 			<List>
 				<ListItem>

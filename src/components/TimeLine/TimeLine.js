@@ -60,7 +60,7 @@ const Timeline = () => {
 		<Section id="about">
 			<SectionTitle>About Me</SectionTitle>
 			<SectionText style={{ maxWidth: 'unset' }}>
-				My name is Aleksa, and I am based in Novi Sad, Serbia. Ive been working in this field for over 4 years, learning
+				My name is Aleksa, and I am based in Novi Sad, Serbia. Ive been working in this field for over 6 years, learning
 				through courses, books, and hands-on experience. I started as an intern, gained valuable guidance from mentors,
 				and eventually transitioned to full-time roles. Currently, I work full-time in a company and occasionally take on
 				freelance projects.
